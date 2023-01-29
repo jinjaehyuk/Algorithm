@@ -29,3 +29,18 @@
  <p>첫째 줄에 N의 사이클 길이를 출력한다.</p>
 
 ### int형 
+```py
+N = int(input())
+num = N
+cnt = 0
+
+while 1:
+    A = num // 10
+    B = num % 10
+    C = (A + B) % 10
+    num = (B*10)+C
+    cnt += 1
+    if(N == num):
+        print(cnt)
+        break    
+```
