@@ -1,14 +1,8 @@
-n = []
-m = list(range(1,31))
-for i in range(0,28,1):
-    n.append(int(input()))
+sno = [i for i in range(1,31)]
 
-for i in range(0,len(n),1):
-    for j in range(0,len(m),1):
-            if n[i] == m[j] :
-                m.remove(m[j])
-                break
+for _ in range(28):
+    apply = int(input())
+    sno.remove(apply)
 
-m = sorted(m)
-print(m[0])
-print(m[1])
+print(min(sno))
+print(max(sno))      
