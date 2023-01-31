@@ -24,3 +24,24 @@
 
  <p>출력은 2줄이다. 1번째 줄엔 제출하지 않은 학생의 출석번호 중 가장 작은 것을 출력하고, 2번째 줄에선 그 다음 출석번호를 출력한다.</p>
 
+###내가 쓴 풀이
+'''py
+n = []
+m = list(range(1,11))
+print(m)
+
+
+for i in range(0,8,1):
+    n.append(int(input()))
+
+for i in range(0,len(n)-1,1):
+    for j in range(0,len(m),1):
+            if n[i] == m[j] :
+                m.remove(m[j])
+                break
+
+m = sorted(m)
+print(m[0])
+print(m[1])
+
+'''
