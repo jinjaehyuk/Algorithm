@@ -1,19 +1,12 @@
-import collections
-words = input()
-words_cnt = collections.Counter(words.lower())
+words = input().lower()
+word_list = list(set(words))
 
-big_word = []
-big_num = []
-for k,v in words_cnt.most_common(2):
-    big_word.append(k)
-    big_num.append(v)
+count = []
+for i in word_list:
+    cnt = words.count(i)
+    count.append(cnt)
 
-if len(big_num) == 1:
-    big_num.append('')
-    
-if big_num[0] == big_num[1]:
+if count.count(max(count)) >1:
     print("?")
 else:
-    print(big_word[0].upper())       
-
-        
+    print(word_list[count.index(max(count))].upper())
