@@ -7,11 +7,8 @@ a.sort(reverse=True)
 sum = 0
 for i in range(len(a)):
     if i == 0 :
-        sum += float(a[i])
+        sum += a[i]
     else:
-        sum += float(a[i]) / 2 
+        sum += a[i] / 2 
 
-if sum.is_integer():
-    print(int(sum))
-else:
-    print(sum)
+print(sum)
