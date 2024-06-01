@@ -3,8 +3,8 @@ class Solution {
         boolean answer = true;
         String[] arr = (String.valueOf(x)).split("");
         int sum = 0;
-        for(int i =0; i < arr.length; i ++){
-            sum += Integer.parseInt(arr[i]);
+        for(String s : arr){
+            sum += Integer.parseInt(s);
         }
         if(x%sum != 0 ) answer= false;
         return answer;
